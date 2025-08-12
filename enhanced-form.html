@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form</title>
+</head>
+<body>
+    <header>
+        <h1>Enhanced HTML5 Content & Form Demonstration</h1>
+    </header>
+
+    <section id="lists">
+        <h2>HTML5 Lists</h2>
+        
+        <article>
+            <h3>Ordered List (Top 3 Web Technologies)</h3>
+            <ol>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ol>
+        </article>
+        
+        <article>
+            <h3>Unordered List (Web Development Tools)</h3>
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Git</li>
+                <li>Chrome DevTools</li>
+                <li>Figma</li>
+            </ul>
+        </article>
+        
+        <article>
+            <h3>Description List (HTML5 Terms)</h3>
+            <dl>
+                <dt>Semantic Elements</dt>
+                <dd>Elements like &lt;header&gt;, &lt;footer&gt;, &lt;article&gt; that clearly describe their meaning.</dd>
+                
+                <dt>Canvas</dt>
+                <dd>An element used to draw graphics via scripting (usually JavaScript).</dd>
+                
+                <dt>Web Storage</dt>
+                <dd>API for storing data in the browser (localStorage and sessionStorage).</dd>
+            </dl>
+        </article>
+    </section>
+
+    <section id="tables">
+        <h2>HTML5 Tables</h2>
+        
+        <table>
+            <caption>Monthly Budget Plan</caption>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Allocated</th>
+                    <th>Spent</th>
+                    <th>Remaining</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Housing</td>
+                    <td>$1,200</td>
+                    <td>$1,200</td>
+                    <td>$0</td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>$600</td>
+                    <td>$450</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Transportation</td>
+                    <td>$300</td>
+                    <td>$280</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Entertainment</td>
+                    <td>$200</td>
+                    <td>$350</td>
+                    <td>-$150</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th>$2,300</th>
+                    <th>$2,280</th>
+                    <th>$20</th>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section id="media">
+        <h2>HTML5 Media</h2>
+        
+        <article>
+            <h3>Image with Figure and Figcaption</h3>
+            <figure>
+                <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Placeholder image" width="400" height="200">
+                <figcaption>Figure 1: Example of a responsive web design layout</figcaption>
+            </figure>
+        </article>
+        
+        <article>
+            <h3>Audio Element</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+        
+        <article>
+            <h3>Video Element</h3>
+            <video width="600" controls poster="https://via.placeholder.com/600x400">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </article>
+    </section>
+
+    <section id="form">
+        <h2>HTML5 Form with Native Validation</h2>
+        
+        <form id="registration-form" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-group">
+                    <label for="fullname">Full Name*</label>
+                    <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="Enter your full name" autocomplete="name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com" autocomplete="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel">
+                    <small>Format: 123-456-7890</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob">Date of Birth*</label>
+                    <input type="date" id="dob" name="dob" required max="2020-01-01">
+                </div>
+                
+                <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <div class="form-group">
+                    <label for="username">Username*</label>
+                    <input type="text" id="username" name="username" required minlength="4" maxlength="20" pattern="[a-zA-Z0-9]+" placeholder="4-20 alphanumeric characters">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password*</label>
+                    <input type="password" id="password" name="password" required minlength="8" placeholder="Minimum 8 characters" autocomplete="new-password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password*</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter your password" autocomplete="new-password">
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <div class="form-group">
+                    <label>Favorite Color</label>
+                    <input type="color" id="color" name="color" value="#3498db">
+                </div>
+                
+                <div class="form-group">
+                    <label for="volume">Notification Volume</label>
+                    <input type="range" id="volume" name="volume" min="0" max="100" step="10" value="50">
+                </div>
+                
+                <div class="form-group">
+                    <label>Interests (Select at least one)*</label>
+                    <div>
+                        <input type="checkbox" id="interest-web" name="interest" value="web" required>
+                        <label for="interest-web" class="inline-label">Web Development</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interest-design" name="interest" value="design">
+                        <label for="interest-design" class="inline-label">Design</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interest-mobile" name="interest" value="mobile">
+                        <label for="interest-mobile" class="inline-label">Mobile Development</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Preferred Contact Method</label>
+                    <div>
+                        <input type="radio" id="contact-email" name="contact" value="email" checked>
+                        <label for="contact-email" class="inline-label">Email</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="contact-phone" name="contact" value="phone">
+                        <label for="contact-phone" class="inline-label">Phone</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="contact-text" name="contact" value="text">
+                        <label for="contact-text" class="inline-label">Text Message</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bio">Short Bio</label>
+                    <textarea id="bio" name="bio" rows="4" maxlength="500" placeholder="Tell us about yourself (max 500 characters)"></textarea>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="">Select a country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="state">State/Province</label>
+                    <input type="text" id="state" name="state" list="states" autocomplete="address-level1">
+                    <datalist id="states">
+                        <option value="California">
+                        <option value="New York">
+                        <option value="Texas">
+                        <option value="Ontario">
+                        <option value="Quebec">
+                        <option value="London">
+                    </datalist>
+                </div>
+                
+                <div class="form-group">
+                    <label for="zip">ZIP/Postal Code</label>
+                    <input type="text" id="zip" name="zip" pattern="(\d{5}(-\d{4})?)|([A-Z]\d[A-Z] \d[A-Z]\d)" autocomplete="postal-code">
+                </div>
+                
+                <div class="form-group">
+                    <label for="file">Profile Picture</label>
+                    <input type="file" id="file" name="file" accept="image/png, image/jpeg">
+                </div>
+                
+                <div class="form-group">
+                    <label for="referral">How did you hear about us?</label>
+                    <select id="referral" name="referral" multiple size="3">
+                        <option value="search">Search Engine</option>
+                        <option value="social">Social Media</option>
+                        <option value="friend">Friend/Family</option>
+                        <option value="ad">Advertisement</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" class="inline-label">I agree to the terms and conditions*</label>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </div>
+            
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HTML5 Demonstration. All rights reserved.</p>
+    </footer>
+</body>
+</html>
